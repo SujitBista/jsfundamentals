@@ -14,15 +14,32 @@ age5 = 24;
 console.log(age5);
 
 //ES 5
-function driverLicence(passedTest){
+// var has a function scope
+function driverLicence5(passedTest){
     if(passedTest){
         var firstName = 'Jeena';
         var yearOfBirth = '1991';
-        document.write(firstName + 
+    }
+    console.log(firstName + 
         ', born in' +
         yearOfBirth + 
         ' ,is now officially allowed to drive a car');
-    }
 }
 
-driverLicence(true);
+driverLicence5(true);
+
+
+//ES 6
+//let and const have a block scope
+function driverLicence6(passedTest){
+    if(passedTest){
+        let firstName = 'Jeena';
+        const yearOfBirth = '1991';
+    }
+    console.log(firstName + 
+        ', born in' +
+        yearOfBirth + 
+        ' ,is now officially allowed to drive a car');
+}
+
+driverLicence6(true);
