@@ -46,11 +46,11 @@ function driverLicence6(passedTest){
 driverLicence6(true);
 
 //here i is two completely different variables
-let i = 23;
-for(let i = 0; i<5; i++){
-    console.log(i);
-}
-console.log(i);
+// let i = 23;
+// for(let i = 0; i<5; i++){
+//     console.log(i);
+// }
+// console.log(i);
 
 // here i is a single variable and is overidden
 var i = 23;
@@ -58,3 +58,17 @@ for(var i = 0; i<5; i++){
     console.log(i);
 }
 console.log(i);
+
+//Es5
+(function(){
+    var c = 0;
+})();
+//cannot be accessed c is blocked scope
+console.log(c);
+
+//Es6
+{
+    var e = 0;
+}
+// variable e is blocked scope
+console.log(e);
