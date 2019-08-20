@@ -32,9 +32,10 @@ driverLicence5(true);
 //ES 6
 //let and const have a block scope
 function driverLicence6(passedTest){
+    let firstName;
+    const yearOfBirth = '1991';
     if(passedTest){
-        let firstName = 'Jeena';
-        const yearOfBirth = '1991';
+        firstName = 'Jeena';
     }
     console.log(firstName + 
         ', born in' +
