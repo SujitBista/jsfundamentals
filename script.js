@@ -44,3 +44,17 @@ function driverLicence6(passedTest){
 }
 
 driverLicence6(true);
+
+//here i is two completely different variables
+let i = 23;
+for(let i = 0; i<5; i++){
+    console.log(i);
+}
+console.log(i);
+
+// here i is a single variable and is overidden
+var i = 23;
+for(var i = 0; i<5; i++){
+    console.log(i);
+}
+console.log(i);
