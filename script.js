@@ -92,3 +92,24 @@ console.log('This is ' +
 
 //Es6
 console.log(`This is ${firstName} ${lastName}. She was born in ${yearOfBirth}. She is now ${calcAge(yearOfBirth)} years old.`)
+
+//Lecture: Arrow function
+
+const years = [1990,1953,1967,1943];
+
+//Es5
+var age5 = years.map(function(el) {
+    return 2016 - el;
+});
+console.log(age5);
+
+//Es6
+let ages6 = years.map(el => 2016 - el);
+console.log(ages6);
+
+ages6 = years.map((el,index) => {
+    const now = new Date().getFullYear();
+    const age = now - el;
+    return `Age element ${index + 1}: ${age}`;
+});
+console.log(ages6);
