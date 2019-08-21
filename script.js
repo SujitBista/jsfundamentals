@@ -91,4 +91,13 @@ console.log('This is ' +
             '. She is now ' + calcAge(yearOfBirth) + ' years old.');
 
 //Es6
-console.log(`This is ${firstName} ${lastName}. She was born in ${yearOfBirth}. She is now ${calcAge(yearOfBirth)} years old.`)
+console.log(`This is 
+${firstName} ${lastName}. 
+She was born in ${yearOfBirth}. 
+She is now ${calcAge(yearOfBirth)} years old.`);
+
+const n = `${firstName} ${lastName}`;
+console.log(n.startsWith('s'));
+console.log(n.endsWith('pa'));
+console.log(n.includes('th')); //case sensetive
+console.log(`${firstName} `.repeat(5));
