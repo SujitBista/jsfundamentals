@@ -64,7 +64,7 @@ console.log(i);
     var c = 0;
 })();
 //cannot be accessed c is blocked scope
-console.log(c);
+//console.log(c);
 
 //Es6
 {
@@ -72,3 +72,23 @@ console.log(c);
 }
 // variable e is blocked scope
 console.log(e);
+
+//Lecture Strings
+let firstName = 'Jeena';
+let lastName = 'Thapa';
+const yearOfBirth = 1991;
+
+function calcAge(year){
+    return 2019 - year;
+}
+//Es5
+console.log('This is ' + 
+            firstName +
+            ' '+
+            lastName+
+            '. She was born in ' +
+            yearOfBirth +
+            '. She is now ' + calcAge(yearOfBirth) + ' years old.');
+
+//Es6
+console.log(`This is ${firstName} ${lastName}. She was born in ${yearOfBirth}. She is now ${calcAge(yearOfBirth)} years old.`)
