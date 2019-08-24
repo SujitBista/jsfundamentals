@@ -126,7 +126,7 @@ var box5 = {
             var str = 'This is a box number '
             + self.position + ' and it is ' + self.color;
             alert(str);
-        })
+        });
     }
 } 
 
@@ -149,3 +149,33 @@ const box6 = {
 } 
 
 box6.clickMe();
+
+function Person(name) {
+    this.name = name;
+}
+
+//Es5
+Person.prototype.myFriends5 = 
+function(friends){
+    var arr = friends.map(function(el) {
+        return this.name + ' is friends with ' + el;
+    }.bind(this));
+    console.log(arr);
+}
+
+new 
+Person('John').myFriends5(['Bob','Jay']);
+
+//Es6
+Person.prototype.myFriends6 = function(friends) {
+    var arr = friends.map(el => {
+        return `${this.name} is friend with ${el}`;
+    });
+    console.log(arr);
+}
+
+var friends = ['Bob','Jay'];
+new Person('John').myFriends6(friends);
+
+
+
