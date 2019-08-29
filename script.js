@@ -178,4 +178,31 @@ var friends = ['Bob','Jay'];
 new Person('John').myFriends6(friends);
 
 
+//////
+//Lecture: Destructuring
 
+//ES5
+var john = ['John', 26];
+//var name = john[0];
+//var age = john[1];
+
+//ES6
+const [name, age] = ['John', 26];
+console.log(name);
+const obj = {
+    mfirstName: 'sujit',
+    mlastName: 'Bista'
+}
+const {mfirstName, mlastName} = obj;
+console.log(mfirstName);
+
+const {mfirstName: fname,mlastName: lname} = obj; 
+console.log(fname +' '+ lname);
+
+function calcAgeRetirement(year) {
+    const mage = new Date().getFullYear() - year;
+    return [mage, 60-mage];
+}
+
+const [mage, retAge] = calcAgeRetirement(1991);
+console.log(`Your age of retirement is ${retAge}`);
