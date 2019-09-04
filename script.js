@@ -206,3 +206,28 @@ function calcAgeRetirement(year) {
 
 const [mage, retAge] = calcAgeRetirement(1991);
 console.log(`Your age of retirement is ${retAge}`);
+
+//function Constructor
+var john = {
+    name: 'John',
+    yearOfBirth: 1990,
+    job: 'teacher'
+}
+
+var Person = function(name,yearOfBirth,job){
+    this.name = name;
+    this.yearOfBirth = yearOfBirth;
+    this.job = job;
+}
+
+Person.prototype.calculateAge = function(){
+    console.log(2019 - this.yearOfBirth);
+}
+var john = new Person('John',1990,'Waiter');
+var jane = new Person('Jane',1989,'Chef');
+var mark = new Person('Mark',1980,'Software Engineer');
+
+console.log(john.name);
+john.calculateAge();
+jane.calculateAge();
+mark.calculateAge();
