@@ -223,11 +223,13 @@ var Person = function(name,yearOfBirth,job){
 Person.prototype.calculateAge = function(){
     console.log(2019 - this.yearOfBirth);
 }
+Person.prototype.lastName = 'smith';
 var john = new Person('John',1990,'Waiter');
 var jane = new Person('Jane',1989,'Chef');
 var mark = new Person('Mark',1980,'Software Engineer');
 
 console.log(john.name);
+console.log(john.lastName);
 john.calculateAge();
 jane.calculateAge();
 mark.calculateAge();
