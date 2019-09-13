@@ -266,3 +266,41 @@ function getRecipe(){
 
 getRecipe();
 
+
+//Lecture: closure
+
+function retirement(retirementAge){
+    var a = ' left until retirement';
+    return function(yearsOfBirth){
+        var age = new Date().getFullYear() - yearsOfBirth;
+        console.log(retirementAge - age + a);
+    }
+}
+
+var retirementNepal = retirement(60);
+retirementNepal(1991);
+var retirementUs = retirement(66);
+retirementUs(1990);
+
+function interviewQuestion(job){
+    if(job === 'designer') {
+        return function(name) {
+            console.log(name + ', can you please explain what UX design is? ');
+        }
+    } else if(job === 'teacher') {
+        return function(name) {
+            console.log('What subject do you teach, ' + name + '?');
+        }
+    } else {
+        return function(name) {
+            console.log('Hello' + name + ', what do you do?');
+        }
+    }
+}
+
+var interviewDesigner = interviewQuestion('designer');
+interviewDesigner('Dimosh');
+var interviewTeacher = interviewQuestion('teacher');
+interviewTeacher('Sujit');
+
+
