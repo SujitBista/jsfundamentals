@@ -303,4 +303,21 @@ interviewDesigner('Dimosh');
 var interviewTeacher = interviewQuestion('teacher');
 interviewTeacher('Sujit');
 
+//function as an argument
+
+var myears = [1991,1989,1990,1994];
+var recevieAge = [];
+function calculateAge(arrYears,calcAge) {
+    for (var i = 0; i<arrYears.length; i++) {
+        recevieAge.push(calcAge(arrYears[i]));
+    }
+}
+
+function calcAge(year) {
+    return new Date().getFullYear() - year;
+}
+
+calculateAge(myears, calcAge);
+console.log(recevieAge);
+
 
