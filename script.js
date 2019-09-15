@@ -321,3 +321,14 @@ calculateAge(myears, calcAge);
 console.log(recevieAge);
 
 
+// Lecture: IIFE
+//Immediately invoked function
+(function () {
+    var score = Math.random() * 10;
+    console.log(score >= 5);
+}) ();
+
+(function (goodLuck) {
+    var score = Math.random() * 10;
+    console.log(score >= 5 - goodLuck);
+}) (5); //result will always be true
