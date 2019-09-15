@@ -332,3 +332,39 @@ console.log(recevieAge);
     var score = Math.random() * 10;
     console.log(score >= 5 - goodLuck);
 }) (5); //result will always be true
+
+// Lecture: Bind, call and apply
+
+var john = {
+    name: 'John',
+    age: 26,
+    job: 'teacher',
+    presentation: function(style,
+    timeOfDay) {
+        if (style === 'formal') {
+            console.log('Good ' + 
+            timeOfDay + ', Ladies and gentleman! I\'m ' +
+            this.name + ', I\'m ' + 
+            this.age + ' years old and I\'m a '+ 
+            this.job + '.');
+        } else if (style === 'friendly') {
+            console.log('Hey! What\'s up? I\'m '+
+            this.name + ' I\'m a '+ this.job + '. I\'m '+
+            this.age + ' years old. Have a nice '+
+            timeOfDay + '.');
+        }
+    }
+};
+
+var emly = {
+    name: 'emly',
+    job: 'designer',
+    age: 35
+};
+
+john.presentation('formal','morning');
+
+john.presentation.call(emly,'friendly','morning');
+
+var johnFriendly = john.presentation.bind(john,'friendly');
+johnFriendly('night');
