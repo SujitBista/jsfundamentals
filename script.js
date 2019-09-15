@@ -368,3 +368,6 @@ john.presentation.call(emly,'friendly','morning');
 
 var johnFriendly = john.presentation.bind(john,'friendly');
 johnFriendly('night');
+
+var emilyFormal = john.presentation.bind(emly,'formal');
+emilyFormal('afternoon');
