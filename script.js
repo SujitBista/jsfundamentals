@@ -369,5 +369,28 @@ john.presentation.call(emly,'friendly','morning');
 var johnFriendly = john.presentation.bind(john,'friendly');
 johnFriendly('night');
 
-var emilyFormal = john.presentation.bind(emly,'formal');
-emilyFormal('afternoon');
+var emlyFormal = john.presentation.bind(emly,'formal');
+emlyFormal('afternoon');
+
+var myYears = [1990,1965,1937,2005,1998];
+
+function arrCalc(arr, fn) {
+    var arrRes = [];
+    for (var i = 0; i<arr.length; i++) {
+        arrRes.push(fn(arr[i]));
+    }
+    return arrRes;
+}
+
+function calculateAge(year) {
+    return new Date().getFullYear() - year;
+}
+
+function isFullAge(limit, age) {
+    return age > limit;
+}
+
+var ages = arrCalc(myYears, calculateAge);
+var fullJapan = arrCalc(ages, isFullAge.bind(this,20));
+console.log(ages);
+console.log(fullJapan);
